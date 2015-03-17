@@ -6,9 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def verify_api_key
-    puts "I'm here"
-    puts params
-    puts "I'm leaving"
+    # TODO: Verify API key
   end
 
 end

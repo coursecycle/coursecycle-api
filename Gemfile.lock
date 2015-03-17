@@ -66,6 +66,7 @@ GEM
     colorize (0.7.5)
     columnize (0.9.0)
     debug_inspector (0.0.2)
+    dotenv (1.0.2)
     erubis (2.7.0)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
@@ -156,6 +157,7 @@ DEPENDENCIES
   capistrano-rvm
   capistrano3-nginx
   capistrano3-puma
+  dotenv
   highline
   jbuilder (~> 2.0)
   nokogiri

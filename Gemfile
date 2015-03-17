@@ -4,6 +4,7 @@ gem 'rails', '4.2.0'
 gem 'pg'
 gem 'jbuilder', '~> 2.0'
 gem 'nokogiri'
+gem 'dotenv'
 
 group :development, :test do
   gem 'byebug'
