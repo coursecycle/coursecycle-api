@@ -74,7 +74,6 @@ namespace :explorecourses do
       # HACKHACK: Every once in a while a date like Jul 2, 20131013 gets parsed out
       # Unsure why this is happening, even with an explicit formatter string
       if start_date.length > 12 or end_date.length > 12
-        puts "ISSUE WITH THIS CLASS"
         next
       end
 
