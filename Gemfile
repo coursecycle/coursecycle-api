@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.0'
-gem 'pg'
+gem 'dotenv'
 gem 'jbuilder', '~> 2.0'
 gem 'nokogiri'
-gem 'dotenv'
+gem 'pg'
+gem 'puma'
+gem 'rails', '4.2.0'
 
 group :development, :test do
   gem 'byebug'
