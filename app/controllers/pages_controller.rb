@@ -2,5 +2,8 @@
 class PagesController < ApplicationController
   skip_before_filter :verify_api_key
 
+  def index
+
+  end
 
 end
