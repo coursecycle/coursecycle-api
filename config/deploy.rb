@@ -26,7 +26,7 @@ set :deploy_to, '/var/www/coursecycle-api'
 set :linked_files, %w{puma.rb .env}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{tmp/pids tmp/sockets log}
+set :linked_dirs, %w{tmp/pids tmp/sockets log data}
 # set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
 # Default value for default_env is {}
@@ -61,6 +61,13 @@ namespace :deploy do
   after :finishing, 'puma:restart'
   after :finishing, 'nginx:restart'
 
+end
+
+namespace :rake do
+  desc "Run a task on the remote server"
+  task :invoke do
+    run("cd #{deploy_to}/current; bundle exec rake #{ENV['task']} RAILS_ENV=#{rails_env}")
+  end
 end
 
 invoke :production
