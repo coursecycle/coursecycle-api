@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   # Course related routes
   get 'courses/:id' => 'courses#view'
-  get 'courses/:id/sections' => 'sections#index'
+  get 'courses/:id/instructors' => 'courses#instructors'
+  get 'courses/:id/sections' => 'courses#sections'
+  post 'courses/search' => 'courses#search'
 
   # Instructor related routes
   get 'instructors/:id' => 'instructors#view'

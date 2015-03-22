@@ -6,7 +6,16 @@ class ApplicationController < ActionController::Base
   private
 
   def verify_api_key
-    # TODO: Verify API key
+    authorization = request.headers['Authorization']
+    if authorization.nil?
+      head :unauthorized
+    else
+      api_key = /api_key="([^)]*)"/.match(authorization).captures
+      account = Account.find_by(:api_key => api_key)
+      if account.nil?
+        head :unauthorized
+      end
+    end
   end
 
 end

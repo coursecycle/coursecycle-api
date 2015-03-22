@@ -32,3 +32,4 @@ bower.json
 
 # Don't add data folders
 /data
+*.sql

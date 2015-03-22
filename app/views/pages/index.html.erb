@@ -1,1 +1,51 @@
-<pre>API in development.</pre>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <h1 class="page-header">Introduction</h1>
+      <p>In the process of creating <a href="https://coursecycle.com">Coursecycle</a>, we realized early on that one of the biggest challenges was integrating data from ExploreCourses into the Coursecycle system. Although we initially had the reviews data and ExploreCourses data placed in the same database, we found that this was creating significant friction when we wanted to modify the database schema of Coursecycle to support new features. As a result, we created the Coursecycle API, which provides an easy to use endpoint for retrieving data from ExploreCourses.</p>
+      <p>If you would like to use the public API, we request that you send an inquiry to <a href="mailto:roger@coursecycle.com">roger@coursecycle.com</a> so that we can keep track of API usage and keep server resources under control. The publicly accessible API has integrated ExploreCourses information from Autumn 2010 through August 2015.</p>
+      <div class="section">
+        <h1 id="courses" class="page-header">Courses</h1>
+        <div class="item">
+          <h2>Get course information</h2>
+          <p><span class="label label-success">Active</span></p>
+          <p><pre>GET /courses/:id</pre></p>
+          <p>Gets basic information for a single course. <a href="/courses/9103">Sample</a></p>
+        </div>
+        <div class="item">
+          <h2>Get course sections</h2>
+          <p><span class="label label-success">Active</span></p>
+          <p><pre>GET /courses/:id/sections</pre></p>
+          <p>Gets all of the sections for a single course. A section is defined as anything that is formally classified as a class in Axess (could be a lecture or a discussion). <a href="/courses/9103/sections">Sample</a></p>
+        </div>
+        <div class="item">
+          <h2>Get course instructors</h2>
+          <p><span class="label label-success">Active</span></p>
+          <p><pre>GET /courses/:id/instructors</pre></p>
+          <p>Gets all of the instructors for a single course. <a href="/courses/9103/instructors">Sample</a></p>
+        </div>
+        <div class="item">
+          <h2>Search for courses</h2>
+          <p><span class="label label-warning">In Progress</span></p>
+          <p><pre>POST /courses/search</pre></p>
+          <p>Search for courses that match a provided search query.</p>
+        </div>
+      </div>
+      <div class="section">
+        <h1 id="instructors" class="page-header">Instructors</h1>
+        <div class="item">
+          <h2>Get instructor information</h2>
+          <p><span class="label label-success">Active</span></p>
+          <p><pre>GET /instructors/:id</pre></p>
+          <p>Gets basic information for a single instructor. <a href="/instructors/1509">Sample</a></p>
+        </div>
+        <div class="item">
+          <h2>Get instructor courses</h2>
+          <p><span class="label label-success">Active</span></p>
+          <p><pre>GET /instructors/:id/courses</pre></p>
+          <p>Gets all of the courses for a single instructor. <a href="/instructors/1509/courses">Sample</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
